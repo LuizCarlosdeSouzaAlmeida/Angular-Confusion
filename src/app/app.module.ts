@@ -16,8 +16,9 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
-import { PromotionService } from './services/promotion.service';
 
+import { LeaderService } from './services/leader.service';
+import { PromotionService } from './services/promotion.service';
 import { DishService } from './services/dish.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -49,7 +50,7 @@ import { ContactComponent } from './contact/contact.component';
     MatToolbarModule,
     FlexLayoutModule
   ],
-  providers: [DishService, PromotionService],
+  providers: [DishService, PromotionService, LeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
