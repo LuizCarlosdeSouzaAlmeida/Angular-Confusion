@@ -1,0 +1,6 @@
+{
+  "/open": {
+    "target": "http://hga.ddns.net:9080",
+    "secure": false
+  }
+}
