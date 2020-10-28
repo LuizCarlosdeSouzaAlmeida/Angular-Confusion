@@ -11,6 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -57,10 +61,14 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatCheckboxModule,
 
+    MatSelectModule,
+    MatSlideToggleModule,
+
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [
