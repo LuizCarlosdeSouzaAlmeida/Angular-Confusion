@@ -51,7 +51,11 @@
     </mat-list>
 
     <div feFlex class="form-size" *ngIf="dish">
-      <p>Form Status: {{ commentForm.status }}</p>
+      <p *ngIf="commentForm.status == 'VALID'">
+        Author: {{ commentForm.author | json }}  <br />
+        Rating: {{ commentForm.rating | json }} <br />
+        Comment: {{ commentForm.comment | json }}
+      </p>
       <form
         novalidate
         [formGroup]="commentForm"

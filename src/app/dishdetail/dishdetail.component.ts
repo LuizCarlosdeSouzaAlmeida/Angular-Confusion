@@ -16,8 +16,8 @@ export class DishdetailComponent implements OnInit {
   @ViewChild('fform') commentFormDirective;
 
   formErrors = {
-    author: null,
-    comment: null,
+    author: '',
+    comment: '',
   };
 
   validationMessages = {
