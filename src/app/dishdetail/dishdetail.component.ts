@@ -121,6 +121,7 @@ export class DishdetailComponent implements OnInit {
         }
       }
     }
+  this.commentForm.value.date = new Date().toISOString();
   }
 
   onSubmit() {

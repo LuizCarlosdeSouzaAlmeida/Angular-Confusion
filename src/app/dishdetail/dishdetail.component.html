@@ -33,7 +33,7 @@
     </mat-card>
   </div>
 
-  <div fxFlex="auto">
+  <div fxFlex="40">
     <mat-list *ngIf="dish">
       <mat-list-header>
         <mat-list-title>
@@ -52,9 +52,8 @@
 
     <div feFlex class="form-size" *ngIf="dish">
       <p *ngIf="commentForm.status == 'VALID'">
-        Author: {{ commentForm.author | json }}  <br />
-        Rating: {{ commentForm.rating | json }} <br />
-        Comment: {{ commentForm.comment | json }}
+          {{ commentForm.value | json }}
+          {{ commentForm.status | json }}
       </p>
       <form
         novalidate
