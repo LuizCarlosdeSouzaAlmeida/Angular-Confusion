@@ -48,13 +48,17 @@
           <span> -- {{ comment.author }} {{ comment.date | date }} </span>
         </p>
       </mat-list-item>
+
+      <mat-list-item *ngIf="commentForm.status == 'VALID'">
+        <h4 matLine>{{ commentForm.value.comment }}</h4>
+        <p matLine>{{ commentForm.value.rating }} Stars</p>
+        <p matLine>
+          <span> -- {{ commentForm.value.author }} </span>
+        </p>
+      </mat-list-item>
     </mat-list>
 
     <div feFlex class="form-size" *ngIf="dish">
-      <p *ngIf="commentForm.status == 'VALID'">
-          {{ commentForm.value | json }}
-          {{ commentForm.status | json }}
-      </p>
       <form
         novalidate
         [formGroup]="commentForm"
