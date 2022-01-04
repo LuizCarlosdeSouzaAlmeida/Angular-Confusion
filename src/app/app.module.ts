@@ -22,6 +22,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -47,7 +49,7 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,18 +66,22 @@ import { LoginComponent } from './login/login.component';
     MatSelectModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
+    HttpClientModule,
 
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSliderModule
+    MatSliderModule,
   ],
-  providers: [DishService, PromotionService, LeaderService],
-  entryComponents: [
-    LoginComponent
+  providers: [
+    DishService,
+    PromotionService,
+    LeaderService,
+    { provide: 'BaseURL', useValue: baseURL },
   ],
-  bootstrap: [AppComponent]
+  entryComponents: [LoginComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

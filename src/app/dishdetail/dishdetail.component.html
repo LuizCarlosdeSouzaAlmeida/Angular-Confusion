@@ -11,10 +11,10 @@
     <mat-card *ngIf="dish">
       <mat-card-header>
         <mat-card-title>
-          <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
+          <h3 *ngIf="dish">{{ BaseURL + dish.name | uppercase }}</h3>
         </mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="{{ dish.image }}" alt="{{ dish.name }}" />
+      <img mat-card-image src="{{ BaseURL + dish.image }}" alt="{{ dish.name }}" />
       <mat-card-content>
         <p>{{ dish.description }}</p>
       </mat-card-content>
