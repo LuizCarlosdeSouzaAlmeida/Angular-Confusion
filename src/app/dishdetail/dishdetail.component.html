@@ -11,7 +11,7 @@
     <mat-card *ngIf="dish">
       <mat-card-header>
         <mat-card-title>
-          <h3 *ngIf="dish">{{ BaseURL + dish.name | uppercase }}</h3>
+          <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
         </mat-card-title>
       </mat-card-header>
       <img mat-card-image src="{{ BaseURL + dish.image }}" alt="{{ dish.name }}" />
@@ -115,8 +115,12 @@
       </form>
     </div>
   </div>
-  <div fxFlex [hidden]="dish">
+  <div fxFlex [hidden]="dish || errMess">
     <mat-spinner></mat-spinner>
     <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>Error: {{ errMess }}</h4>
   </div>
 </div>
