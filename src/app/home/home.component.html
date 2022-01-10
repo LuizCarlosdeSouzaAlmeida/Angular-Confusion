@@ -19,7 +19,7 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card *ngIf="promotion" fxFlex>
+  <mat-card *ngIf="promotion" fxFlex [@expand]>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
@@ -36,7 +36,7 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card *ngIf="leader" fxFlex>
+  <mat-card *ngIf="leader" fxFlex [@expand]>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
